@@ -5,11 +5,11 @@
 }
 
 :root {
-    --hamburger-height: 22px;
+    
 }
 
 .header {
-    padding:15px 20px;
+    padding:17px 20px;
     display:flex;
     flex-flow:row wrap;
     justify-content: flex-end;
@@ -17,12 +17,13 @@
 
 .menu-hamburger_wrapper {
     width:28px;
-    height:var(--hamburger-height);
+    height:22px;
     display:flex;
     flex-flow:column wrap;
     justify-content: space-between;
     position:relative;
     z-index:2;
+    cursor: pointer;
 }
 
 .menu-hamburger_before, .menu-hamburger_middle, .menu-hamburger_after {
@@ -83,6 +84,6 @@
 
 @media (min-width:600px) {
     body {
-        padding:20px 30px;
+        /*padding:20px 30px;*/
     }
 }
