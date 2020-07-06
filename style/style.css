@@ -1,0 +1,49 @@
+* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+:root {
+    --hamburger-height: 22px;
+}
+
+.header {
+    padding:15px 20px;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: flex-end;
+}
+
+.menu-hamburger_wrapper {
+    width:30px;
+    height:var(--hamburger-height);
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: space-between;
+    position:relative;
+}
+
+.menu-hamburger_before, .menu-hamburger_middle, .menu-hamburger_after {
+    width:100%;
+    height:4px;
+    background-color: black;
+    border-radius:3px;
+    transition: all 0.5s;
+}
+
+.menu-hamburger_middle {
+    transform-origin: 0 0;
+}
+
+.pressed.menu-hamburger_wrapper .menu-hamburger_middle {
+    transform:scaleX(0);
+}
+
+.pressed.menu-hamburger_wrapper .menu-hamburger_before {
+    transform:rotate(45deg) translateY(12.5px);
+}
+
+.pressed.menu-hamburger_wrapper .menu-hamburger_after {
+    transform:rotate(-45deg) translateY(-12.5px);
+}
