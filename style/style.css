@@ -71,7 +71,7 @@
     position:absolute;
     left:50vw;
     top:50vh;
-    transform:translate(-50%, -50%);
+    transform:translate(-50%, -75%);
     text-align:center;
 }
 
@@ -79,4 +79,10 @@
     display:inline-block;
     padding:5px 2px;
     font-size:20px;
+}
+
+@media (min-width:600px) {
+    body {
+        padding:20px 30px;
+    }
 }
