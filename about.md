@@ -1,15 +1,7 @@
 ---
 permalink: /about
 layout: default
+title: about
 ---
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-</head>
-<body>
-    about me
-</body>
-</html>
+this is about me
