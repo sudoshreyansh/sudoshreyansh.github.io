@@ -44,11 +44,11 @@
 }
 
 .pressed.menu-hamburger_wrapper .menu-hamburger_before {
-    transform:rotate(45deg) translateY(12.5px);
+    transform:rotate(45deg) translate(6px, 3px);
 }
 
 .pressed.menu-hamburger_wrapper .menu-hamburger_after {
-    transform:rotate(-45deg) translateY(-12.5px);
+    transform:rotate(-45deg) translate(9px, -7px);
 }
 
 .navigation-menu {
