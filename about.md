@@ -4,4 +4,4 @@ layout: custom
 title: about
 ---
 
-this is about me yeah
+<img src="/icon/wavey.svg" style="display:block; margin:auto; width:100px">
