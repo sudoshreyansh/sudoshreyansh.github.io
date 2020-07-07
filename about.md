@@ -4,4 +4,5 @@ layout: custom
 title: about
 ---
 
-<img src="/icon/wavey.svg" style="display:block; margin:auto; width:100px">
+<span class="hero-content">Hello!</span><br>
+How ya doing ? This is my about page
