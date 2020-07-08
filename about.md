@@ -10,5 +10,5 @@ title: about
             <p>
                 I am a Computer Science student, exploring the depths of the CS world. Also, I am a professional web developer, training in web design and building websites for companies as freelancing and also contribute to open source projects that interest me in Github.
             </p>
-            <div class="slide-icon"></div>
+            <a href="#intro" class="slide-icon noa"></a>
         </div>
