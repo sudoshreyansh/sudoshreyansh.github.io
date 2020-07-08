@@ -6,7 +6,34 @@
 
 :root {
     font-size:18px;
-    font-family: Roboto;
+    font-family: Rubik;
+    font-weight:300;
+}
+
+h1,h2, h3, h4, h5 {
+    font-weight:500;
+    margin-bottom:30px;
+    margin-top:35px;
+}
+
+h1 {
+    font-size:3.3em;
+}
+
+h2 {
+    font-size:2.5em;
+}
+
+h3 {
+    font-size:2.0em;
+}
+
+h4 {
+    font-size:1.75em;
+}
+
+h5 {
+    font-size:1.5em;
 }
 
 a {
@@ -14,6 +41,7 @@ a {
     color:black;
     text-decoration: none;
     padding:0px 5px;
+    font-weight:400;
     position: relative;
 }
 
@@ -22,6 +50,7 @@ a:after {
     display:block;
     position:absolute;
     background-color: #5fff88;
+    opacity:0.6;
     left:0;
     right:0;
     top:60%;
@@ -37,6 +66,10 @@ a:hover:after {
 img {
     display:block;
     margin:auto;
+}
+
+p {
+    margin-bottom:15px;
 }
 
 .header {
@@ -103,7 +136,7 @@ img {
     position:absolute;
     left:50vw;
     top:50vh;
-    transform:translate(-50%, -75%);
+    transform:translate(-50%, -70%);
     text-align:center;
 }
 
@@ -117,12 +150,63 @@ img {
     padding:30px 20px;
 }
 
-.hero-image {
-    width:100px;
-    margin-bottom:20px;
+.hero-content--main {
+    margin-bottom:35px;
+    margin-top:0px;
 }
 
-.hero-content {
-    font-weight:bold;
-    font-size:3rem;
+.hero-content--sub {
+    margin-bottom:30px;
+    margin-top:0px;
+}
+
+.hero-slide {
+    height:calc(90vh - 122px);
+    position:relative;
+}
+
+.slide-icon {
+    width:38px;
+    height:50px;
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.slide-icon::after, .slide-icon::before {
+    content:"";
+    display:block;
+    position:absolute;
+    width:50%;
+    height:4px;
+    background-color:black;
+}
+
+.slide-icon::after {
+    right:50%;
+    top:50%;
+    transform-origin: 100% 100%;
+    transform:rotate(45deg);
+}
+
+.slide-icon::before {
+    left:50%;
+    top:50%;
+    transform-origin: 0 100%;
+    transform:rotate(-45deg);
+}
+
+@media (min-width:600px) {
+    :root {
+        font-size:22px;
+    }
+
+    .header {
+        padding:50px 80px;
+    }
+
+    .content {
+        padding:20px 100px 50px;
+    }
 }
