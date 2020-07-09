@@ -1,5 +1,5 @@
 ---
-permalink: /about
+permalink: /testfonts
 layout: custom
 title: about
 ---
