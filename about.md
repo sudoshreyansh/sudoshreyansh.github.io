@@ -4,7 +4,7 @@ layout: custom
 title: about
 ---
 
-<div class="hero-slide">
+<div class="slide">
             <div class="hero-content">
                 <h1 class="hero-content--main">Hello!</h1>
                 <h4 class="hero-content--sub">My name is Shreyansh Jain</h4>
@@ -13,4 +13,9 @@ title: about
                 </p>
             </div>
             <a href="#intro" class="slide-icon noa"></a>
+        </div>
+        <div id="intro" class="slide">
+            <h2 class="slide--heading">
+                Languages I Know
+            </h2>
         </div>
