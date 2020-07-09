@@ -79,6 +79,7 @@
 
 .navigation-menu a {
     padding:0px 5px;
+    font-weight:400;
 }
 
 @media (min-width:600px) {
