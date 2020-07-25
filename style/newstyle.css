@@ -116,6 +116,7 @@ ul {
 
 .hero-content {
     margin-bottom:3.45em;
+    text-align:center;
 }
 
 .hero-content h1 {
@@ -125,8 +126,12 @@ ul {
 
 .hero-content .hero-support-content {
     margin:1.5em 0;
-    padding-right:1em;
     line-height:1.3em;
+}
+
+.hero-buttons {
+    display:inline-block;
+    margin:auto;
 }
 
 .hero-buttons button {
