@@ -3,15 +3,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{page.title}} | Sudo Shreyansh</title>
-    <link rel="stylesheet" type="text/css" href="./../style/style.css">
-    <link rel="stylesheet" type="text/css" href="./../style/header.css">
-    <link rel="stylesheet" type="text/css" href="./../style/global.css">
+    <link rel="stylesheet" type="text/css" href="./../style/newstyle.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./../style/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./../style/header.css"> -->
+    <!--<link rel="stylesheet" type="text/css" href="./../style/global.css">-->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    {% include header.html %}
-    <div class="content">
-        {{page.content}}
+    <div class="wrapper">
+        <div class="header">
+            <a href="" class="logo">
+                Shreyansh Jain
+            </a>
+            <div class="navigation-wrapper">
+                <div class="hamburger">
+                    <div class="hamburger--first-line"></div>
+                    <div class="hamburger--second-line"></div>
+                    <div class="hamburger--third-line"></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Work</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    I turn ideas into professional websites
+                </h1>
+                <p class="hero-support-content">
+                    I am a full-stack web developer who can help you turn your idea into a reality, be it a professional website or a complex server-side application, I can do it all.
+                </p>
+                <div class="hero-buttons">
+                    <button>Know more</button>
+                    <span>My work</span>
+                </div>
+            </div>
+            <div class="digital-me-phone">
+                <div class="digital-me-title">
+                    Meet the digital me
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./../script/script.js"></script>
 </body>
