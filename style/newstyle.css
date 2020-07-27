@@ -19,6 +19,10 @@ ul {
     padding:0;
 }
 
+p {
+    line-height:1.3em;
+}
+
 .wrapper {
     max-width:1200px;
     margin:0 auto;
@@ -126,7 +130,6 @@ ul {
 
 .hero-support-content {
     margin:1.5em 0;
-    line-height:1.3em;
 }
 
 .hero-buttons {
