@@ -149,6 +149,21 @@ ul {
     margin-left:1em;
 }
 
+.portfolio-phone {
+    padding:10px;
+    width:70%;
+    background-color:black;
+    border-radius:10px;
+    margin:auto;
+}
+
+.portfolio-image {
+    display:block;
+    width:100%;
+}
+
+/* Chatbot Design 
+
 .digital-me-phone {
     position:relative;
     width:70%;
@@ -169,4 +184,4 @@ ul {
     transform:translateY(-50%);
     text-align:center;
     text-transform:capitalize;
-}
+}*/
