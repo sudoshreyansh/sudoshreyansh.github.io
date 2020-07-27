@@ -119,12 +119,12 @@ ul {
     text-align:center;
 }
 
-.hero-content h1 {
+.hero-title {
     margin-top:0;
     margin-bottom:0;
 }
 
-.hero-content .hero-support-content {
+.hero-support-content {
     margin:1.5em 0;
     line-height:1.3em;
 }
@@ -160,6 +160,31 @@ ul {
 .portfolio-image {
     display:block;
     width:100%;
+}
+
+/* Skills section */
+
+.wrapper.skills {
+    background: black;
+    color:white;
+}
+
+.skills-wrapper {
+    padding:2em 0;
+    text-align:center;
+}
+
+.skills-title {
+    margin:0;
+    margin-bottom:1em;
+}
+
+.skills-content {
+    margin:0 0.75em 2em;
+}
+
+.skills-content--title {
+    font-size:1.2em;
 }
 
 /* Chatbot Design 
