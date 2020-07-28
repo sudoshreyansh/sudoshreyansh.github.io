@@ -152,17 +152,41 @@ p {
     margin-left:1em;
 }
 
+.portfolio-phone-wrapper {
+    width:70%;
+    margin:auto;
+    white-space: nowrap;
+    overflow-x:scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.portfolio-phone-wrapper::-webkit-scrollbar {
+    display:none;
+}
+
 .portfolio-phone {
     padding:10px;
-    width:70%;
+    width:100%;
     background-color:black;
     border-radius:10px;
-    margin:auto;
+    display:inline-block;
+    margin-right:5em;
+    scroll-snap-align: center;
+}
+
+.portfolio-phone:last-child {
+    margin-right:0;
 }
 
 .portfolio-image {
     display:block;
     width:100%;
+}
+
+.triangle-divider {
+    width:100%;
+    border-bottom:solid 30px black;
+    border-left:solid 100vw transparent;
 }
 
 /* Skills section */
