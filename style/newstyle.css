@@ -242,20 +242,12 @@ p {
     margin:0 0 2.2em;
 }
 
-.skills-content--icons {
-    margin-bottom:.5em;
-}
-
-.skills-content--icon {
-    padding:0.5em;
-    border:2px solid;
-    font-weight: bold;
-    margin:0.1em;
-    display: inline-block;
-}
-
 .skills-content--title {
     font-size:1.2em;
+}
+
+.skills-content--techs {
+    font-weight:600;
 }
 
 /* Chatbot Design 
