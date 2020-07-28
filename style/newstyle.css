@@ -246,6 +246,14 @@ p {
     margin-bottom:.5em;
 }
 
+.skills-content--icon {
+    padding:0.5em;
+    border:2px solid;
+    font-weight: bold;
+    margin:0.1em;
+    display: inline-block;
+}
+
 .skills-content--title {
     font-size:1.2em;
 }
