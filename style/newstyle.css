@@ -97,21 +97,53 @@ p {
     overflow: hidden;
 }
 
-.navigation-wrapper.active>nav {
+.navigation-wrapper.active>.navigation-menu-wrapper {
     right:0;
 }
 
-.navigation-wrapper>nav>ul {
+.navigation-menu {
     position:absolute;
     top:50vh;
     left:50vw;
     transform:translate(-50%, -50%);   
 }
 
-.navigation-wrapper li {
+.navigation-menu-item {
     display:block;
     text-align:center;
     margin:.75em 0;
+    font-size:1.8em;
+}
+
+.navigation-menu-item-link {
+    position:relative;
+}
+
+.navigation-menu-item-link:after, .navigation-menu-item-link:before {
+    content:"";
+    position: absolute;
+    display:block;
+}
+
+.navigation-menu-item-link:after {
+    background-color: white;
+    right:100%;
+    width:2em;
+    top:calc(100% - 1px);
+    height:4px;
+    transition:right 0.5s;
+}
+
+.navigation-menu-item-link:before {
+    left:0;
+    right:0;
+    top:100%;
+    height:2px;
+    background-color:black;
+}
+
+.navigation-menu-item:hover .navigation-menu-item-link:after {
+    right:-2em;
 }
 
 .hero-wrapper {
