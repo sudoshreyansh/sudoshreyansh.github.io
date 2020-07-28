@@ -232,6 +232,7 @@ p {
     padding:3.2em 0.75em;
 }
 
+
 .skills-title {
     margin:0;
     margin-bottom:1em;
@@ -239,6 +240,10 @@ p {
 
 .skills-content {
     margin:0 0 2.2em;
+}
+
+.skills-content--icons {
+    margin-bottom:.5em;
 }
 
 .skills-content--title {
