@@ -81,6 +81,52 @@ p {
     padding:0 1em;
 }
 
+/* Load Animation */
+
+@keyframes removeLoader {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+        display:none;
+    }
+}
+
+.load-animation-wrapper {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:white;
+    z-index:12;
+    animation:removeLoader 1s 0.8s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.load-animation-content-wrapper {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:100vw;
+    background-color:black;
+    transition:right 0.5s;
+}
+
+.load-animation-wrapper.active {
+    opacity:1;
+    animation:none;
+}
+
+.load-animation-wrapper.active .load-animation-content-wrapper {
+    right:0;
+    transition:right 0.5s 0.3s;
+}
+
+/* Header */
+
 .header {
     padding:.75em 0;
     display:flex;
