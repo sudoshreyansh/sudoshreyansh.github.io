@@ -93,6 +93,15 @@ p {
     }
 }
 
+@keyframes contentSlideIn {
+    from {
+        right:100vw;
+    }
+    to {
+        right:0;
+    }
+}
+
 .load-animation-wrapper {
     position:fixed;
     top:0;
@@ -121,8 +130,8 @@ p {
 }
 
 .load-animation-wrapper.active .load-animation-content-wrapper {
-    right:0;
-    transition:right 0.5s 0.3s;
+    animation:contentSlideIn 0.5s 0.3s;
+    animation-fill-mode: forwards;
 }
 
 /* Header */
@@ -225,6 +234,7 @@ p {
 .hero-title {
     margin-top:0;
     margin-bottom:0;
+    font-size:2.4em;
 }
 
 .hero-support-content {
