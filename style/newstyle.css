@@ -93,6 +93,15 @@ p {
     }
 }
 
+@keyframes contentSlideIn {
+    from {
+        right:100vw;
+    }
+    to {
+        right:0;
+    }
+}
+
 .load-animation-wrapper {
     position:fixed;
     top:0;
@@ -121,8 +130,8 @@ p {
 }
 
 .load-animation-wrapper.active .load-animation-content-wrapper {
-    right:0;
-    transition:right 0.5s 0.3s;
+    animation:contentSlideIn 0.5s 0.3s;
+    animation-fill-mode: forwards;
 }
 
 /* Header */
@@ -214,7 +223,7 @@ p {
 }
 
 .hero-wrapper {
-    margin:2.7em 0;
+    margin:2.0em 0;
 }
 
 .hero-content {
@@ -223,8 +232,9 @@ p {
 }
 
 .hero-title {
-    margin-top:0;
+    margin-top:1em;
     margin-bottom:0;
+    font-size:2.4em;
 }
 
 .hero-support-content {
@@ -252,7 +262,7 @@ p {
 }
 
 .portfolio-phone-wrapper {
-    width:70%;
+    width:40%;/*70%;*/
     margin:auto;
     white-space: nowrap;
     overflow-x:scroll;
@@ -264,7 +274,7 @@ p {
 }
 
 .portfolio-phone {
-    padding:10px;
+    padding:5px;
     width:100%;
     background-color:black;
     border-radius:10px;
