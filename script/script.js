@@ -11,5 +11,7 @@ function toggleMenu(event) {
 }
 
 window.addEventListener('load', function() {
-    document.getElementsByClassName('load-animation-wrapper')[0].classList.remove('active');
+    setTimeout(function() {
+        document.getElementsByTagName('body')[0].classList.remove('inactive');
+    }, 0);
 });
