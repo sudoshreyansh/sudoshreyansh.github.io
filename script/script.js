@@ -10,8 +10,8 @@ function toggleMenu(event) {
     }
 }
 
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        document.getElementsByTagName('body')[0].classList.remove('inactive');
-    }, 0);
-});
+// window.addEventListener('load', function() {
+//     setTimeout(function() {
+//         document.getElementsByClassName('load-animation-wrapper')[0].classList.remove('active');
+//     }, 2000);
+// });

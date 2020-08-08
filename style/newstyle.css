@@ -82,31 +82,59 @@ p {
 }
 
 /* Load Animation */
+/* @keyframes animationLoadContent {
+    0% {
+        transform:translateY(1em);
+    }
 
+    10% {
+        transform:translateY(0);
+    }
+
+    90% {
+        transform:translateY(0);
+    }
+
+    100% {
+        transform:translateY(1em);
+    }
+}
 .load-animation-wrapper {
     position:fixed;
-    top:100vh;
+    top:0;
     left:0;
     right:0;
     bottom:0;
-    background-color:black;
+    background-color:white;
     z-index:12;
-    transition:top .8s 2s ease-in;
+    transition:opacity .8s 2s linear;
+    opacity:0;
+    overflow: hidden;
 }
 
 .load-animation-content-wrapper {
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color:black;
+    font-size:2em;
+    font-weight:bold;
+    position:absolute;
+    bottom:2em;
+    left:2em;
+    overflow: hidden;
+}
+
+.load-animation-content {
+    animation:animationLoadContent 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.active .load-animation-content {
+    transform:translateY(1em);
+    animation:none;
 }
 
 .load-animation-wrapper.active {
-    top:0;
+    opacity:1;
     transition:none;
-}
+} */
 
 /* Header */
 
@@ -210,23 +238,23 @@ p {
     margin-bottom:0;
     font-size:2.4em;
     line-height:1.05em;
-    transition:all 0.5s linear;
+    /* transition:all 0.5s linear; */
 }
 
-.inactive .hero-title, .inactive .hero-buttons, .inactive .hero-support-content {
+/* .inactive .hero-title, .inactive .hero-buttons, .inactive .hero-support-content {
     transform:translateY(-.75em);
     opacity:0;
-}
+} */
 
 .hero-support-content {
     margin:1.5em 0;
-    transition:all 0.5s 0.5s linear;
+    /* transition:all 0.5s 0.5s linear; */
 }
 
 .hero-buttons {
     display:inline-block;
     margin:auto;
-    transition:all 0.5s 1s linear;
+    /* transition:all 0.5s 1s linear; */
 }
 
 .hero-buttons button {
@@ -250,13 +278,13 @@ p {
     white-space: nowrap;
     overflow-x:scroll;
     scroll-snap-type: x mandatory;
-    transition: all 0.5s 2s;
+    /* transition: all 0.5s 2s; */
 }
 
-.inactive .portfolio-phone-wrapper {
+/* .inactive .portfolio-phone-wrapper {
     transform:translateY(5em);
     opacity:0;
-}
+} */
 
 .portfolio-phone-wrapper::-webkit-scrollbar {
     display:none;
