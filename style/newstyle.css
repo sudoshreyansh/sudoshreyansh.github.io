@@ -83,35 +83,15 @@ p {
 
 /* Load Animation */
 
-@keyframes removeLoader {
-    from {
-        opacity:1;
-    }
-    to {
-        opacity:0;
-        display:none;
-    }
-}
-
-@keyframes contentSlideIn {
-    from {
-        right:100vw;
-    }
-    to {
-        right:0;
-    }
-}
-
 .load-animation-wrapper {
     position:fixed;
-    top:0;
+    top:100vh;
     left:0;
     right:0;
     bottom:0;
-    background-color:white;
+    background-color:black;
     z-index:12;
-    animation:removeLoader 1s 0.8s ease-out;
-    animation-fill-mode: forwards;
+    transition:top .8s 2s ease-in;
 }
 
 .load-animation-content-wrapper {
@@ -119,19 +99,13 @@ p {
     top:0;
     bottom:0;
     left:0;
-    right:100vw;
+    right:0;
     background-color:black;
-    transition:right 0.5s;
 }
 
 .load-animation-wrapper.active {
-    opacity:1;
-    animation:none;
-}
-
-.load-animation-wrapper.active .load-animation-content-wrapper {
-    animation:contentSlideIn 0.5s 0.3s;
-    animation-fill-mode: forwards;
+    top:0;
+    transition:none;
 }
 
 /* Header */

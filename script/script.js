@@ -9,3 +9,7 @@ function toggleMenu(event) {
         navigationWrapper.classList.add('active');
     }
 }
+
+window.addEventListener('load', function() {
+    document.getElementsByClassName('load-animation-wrapper')[0].classList.remove('active');
+});
