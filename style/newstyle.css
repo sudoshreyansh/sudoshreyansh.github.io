@@ -214,19 +214,19 @@ p {
 }
 
 .inactive .hero-title, .inactive .hero-buttons, .inactive .hero-support-content {
-    transform:translateY(-.5em);
+    transform:translateY(-.75em);
     opacity:0;
 }
 
 .hero-support-content {
     margin:1.5em 0;
-    transition:all 0.5s 1s linear;
+    transition:all 0.5s 0.5s linear;
 }
 
 .hero-buttons {
     display:inline-block;
     margin:auto;
-    transition:all 0.5s 1.5s linear;
+    transition:all 0.5s 1s linear;
 }
 
 .hero-buttons button {
@@ -250,7 +250,7 @@ p {
     white-space: nowrap;
     overflow-x:scroll;
     scroll-snap-type: x mandatory;
-    transition: all 0.5s 2.5s;
+    transition: all 0.5s 2s;
 }
 
 .inactive .portfolio-phone-wrapper {
