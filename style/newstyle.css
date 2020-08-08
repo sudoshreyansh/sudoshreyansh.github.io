@@ -341,6 +341,10 @@ p {
     margin:0 0 2.2em;
 }
 
+.skills-content:last-child {
+    margin-bottom: 2.5em;
+}
+
 .skills-content--title {
     font-size:1.2em;
 }
@@ -349,27 +353,39 @@ p {
     font-weight:600;
 }
 
+.skills-wrapper .link {
+    margin-bottom:1em;
+}
 
-.projects-wrapper {
+.projects-wrapper, .clients-wrapper {
     padding:3em 0.75em 2.2em;
 }
 
-.projects-title {
+.projects-title, .clients-title {
     margin-top:0;
     margin-bottom:0;
 }
 
-.projects-content-wrapper {
+.projects-content-wrapper, .clients-content-wrapper {
     margin-top:2em;
     margin-bottom:2em;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
 }
 
-.projects-content--card {
+.projects-content--card, .clients-content--card {
     width:100%;
-    position:relative;
-    padding-top:50%;
+    position:relative;   
+    width:calc(50% - .5em);
+    padding-top:40%;
     margin-top:1.0em;
     background-color:black;
+    box-sizing: content-box;
+}
+
+.projects-content--card:first-child, .projects-content--card:nth-child(2), .clients-content--card:first-child, .clients-content--card:nth-child(2) {
+    margin-top:0;
 }
 
 .projects-content--card img {
@@ -379,6 +395,7 @@ p {
     top:50%;
     transform:translate(-50%, -50%);
 }
+
 
 /* Chatbot Design 
 
