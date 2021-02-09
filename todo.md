@@ -1,6 +1,6 @@
 ---
 permalink: /todo
-layout: custom-blank
+layout: customblank
 ---
 
 <html lang="en">
