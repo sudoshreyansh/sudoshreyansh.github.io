@@ -105,7 +105,16 @@ input[type="submit"] {
     display: flex;
     flex-flow: row nowrap;
     align-items: baseline;
-    margin: .8em 0
+    margin: .8em 0;
+    padding-right: .5em;
+}
+
+.card:after {
+    content: attr(data-category);
+    background-color: red;
+    color: white;
+    padding: .2em 1em;
+    border-radius: 5px;
 }
 
 .card-title {

@@ -24,6 +24,8 @@ layout: customblank
                 <div>
                     Task: <br>
                     <textarea name="" id="task-content" cols="30" rows="5"></textarea><br>
+                    Category: <br>
+                    <input type="text" name="" id="task-category"><br>
                     <input type="submit" id="task-submit" value="Add New">
                 </div>
             </div>

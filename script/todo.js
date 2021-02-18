@@ -1,7 +1,11 @@
 const localStorageKey = 'toDoTasks';
 
-let tasks = getTasks();
-Object.keys(tasks).forEach(task => renderTask(task, tasks[task]));
+let LocalStorage = getLocalStorage();
+Object.keys(LocalStorage).sort((category1, category2) => (
+    LocalStorage[category1].position <= LocalStorage[category2].position
+)).forEach(category => {
+    Object.keys(LocalStorage[category].tasks).sort().forEach(task => renderTask(task, LocalStorage[category].tasks[task], category, true));
+});
 
 document.querySelectorAll('.card').forEach((element) => {
     element.addEventListener('click', toggleTask);
@@ -9,33 +13,42 @@ document.querySelectorAll('.card').forEach((element) => {
 
 document.querySelector('#task-submit').addEventListener('click', () => {
     let content = document.querySelector('#task-content').value;
+    let category = document.querySelector('#task-category').value;
+    category = category ? category : "Uncategorized";
     if ( content ) {
-        renderTask(addTask(content), content);
+        renderTask(addTask(content, category), content, category);
         document.querySelector('#task-content').value = "";
+        document.querySelector('#task-category').value = "";
     }
 });
 
-function saveTasks() {
-    localStorage.setItem(localStorageKey, JSON.stringify(tasks));
+function saveLocalStorage() {
+    localStorage.setItem(localStorageKey, JSON.stringify(LocalStorage));
 }
 
-function getTasks() {
-    let tasks = localStorage.getItem(localStorageKey);
-    return tasks ? JSON.parse(tasks) : {};
+function getLocalStorage() {
+    let storage = localStorage.getItem(localStorageKey);
+    return storage ? JSON.parse(storage) : {};
 }
 
-function addTask(content, id=Date.now()) {
-    tasks[id] = content;
-    saveTasks();
+function addTask(content, category="Uncategorized", id=Date.now()) {
+    if ( !LocalStorage[category] ) {
+        LocalStorage[category] = {
+            position: 10,
+            tasks: {}
+        }
+    }
+    LocalStorage[category].tasks[id] = content;
+    saveLocalStorage();
     return id;
 }
 
-function removeTask(id) {
-    delete tasks[id];
-    saveTasks();
+function removeTask(id, category) {
+    delete LocalStorage[category].tasks[id];
+    saveLocalStorage();
 }
 
-function renderTask(id, content) {
+function renderTask(id, content, category, appendMode = false) {
     let cardWrapper = document.createElement('div');
     cardWrapper.classList.add('card');
 
@@ -49,16 +62,26 @@ function renderTask(id, content) {
     cardWrapper.appendChild(cardCheckbox);
     cardWrapper.appendChild(cardTitle);
     cardWrapper.dataset.id = id;
+    cardWrapper.dataset.category = category;
 
-    document.querySelector('.task-cards-wrapper').appendChild(cardWrapper);
+    if ( appendMode ) {
+        document.querySelector('.task-cards-wrapper').appendChild(cardWrapper);
+    } else {
+        let categoryElements = document.querySelectorAll(`.card[data-category="${category}"]`);
+        if ( categoryElements.length == 0 ) {
+            document.querySelector('.task-cards-wrapper').appendChild(cardWrapper);
+        } else {
+            categoryElements[categoryElements.length - 1].after(cardWrapper);
+        }
+    }
     cardWrapper.addEventListener('click', toggleTask);
 }
 
-function toggleTask(event) {
+function toggleTask() {
     if ( this.classList.contains('completed') ) {
-        addTask(this.querySelector('.card-title').textContent, this.dataset.id);
+        addTask(this.querySelector('.card-title').textContent, this.dataset.category, this.dataset.id);
     } else {
-        removeTask(this.dataset.id);
+        removeTask(this.dataset.id, this.dataset.category);
     }
     this.classList.toggle('completed');
 }
