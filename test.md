@@ -1,6 +1,6 @@
 ---
 permalink: /testfonts
-layout: custom
+layout: customblank
 title: about
 ---
 
