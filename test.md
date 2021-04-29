@@ -25,9 +25,5 @@ title: about
         <p>H tags come with default margins Hope it is workingLorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus justo metus, rhoncus non lacus pellentesque, pretium interdum urna. Aliquam ullamcorper odio magna, in tincidunt risus pulvinar sit amet. Donec tincidunt neque in arcu maximus, sit amet hendrerit est suscipit. Donec sed venenatis neque. Integer ullamcorper, ipsum nec ornare mattis, justo quam dapibus leo, eget rutrum enim est eget dolor. Maecenas dignissim et risus vel aliquam. Nam ac massa in ante convallis dapibus a eget lacus.</p>
 
         <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
+
 </ul>
