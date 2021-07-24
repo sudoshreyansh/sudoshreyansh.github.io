@@ -147,6 +147,11 @@ button.button--primary {
     position: relative;
 }
 
+.block--hero .button--primary {
+    margin: 2.2rem auto 0;
+    display: block;
+}
+
 button.button--primary:after, button.button--primary:before {
     content: "";
     position: absolute;
@@ -260,4 +265,132 @@ footer .menu__nav-item {
     letter-spacing: .04rem;
     opacity: .6;
     padding: .6rem 0 .6rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 1200px;
+        padding: 0 2.4rem;
+        margin: auto;
+    }
+
+    .block--2-column {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .block {
+        margin-bottom: 1.6rem;
+    }
+
+    .block.block--hero {
+        flex-direction: row-reverse;
+    }
+
+    .block__image {
+        margin: 0;
+        width: 30%;
+        max-width: none;
+    }
+
+    .block--hero .block__image {
+        width: 50%;
+    }
+
+    .block--hero .block__image img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .content--hero {
+        margin-bottom: 0;
+    }
+
+    .content--hero .content__heading {
+        font-size: 7.2rem;
+        line-height: 6.8rem;
+        letter-spacing: .06rem;
+    }
+
+    .content--hero .content__sub-heading {
+        font-size: 3.7rem;
+        line-height: 4.4rem;
+    }
+
+    .content:not(.content--hero) {
+        width: 100%;
+    }
+
+    .block--2-column .content:not(.content--hero) {
+        width: 60%;
+    }
+
+    .block--2-column .content__heading, 
+    .block--2-column .content__sub-heading,
+    .block--2-column .content__content {
+        text-align: left;
+    }
+
+    .content__heading {
+        font-size: 3.8rem;
+        letter-spacing: .04rem;
+    }
+    
+    .content__content {
+        font-size: 1.25rem;
+    }
+
+    .block--hero .button--primary {
+        margin: 1.8rem 0 0 .5rem;
+    }
+
+    .block button {
+        font-size: 1.6rem;
+    }
+
+    .content__content--gallery {
+        padding: 1rem 0;
+    }
+    
+    .content__content--gallery img {
+        max-width: none;
+        width: 20%;
+    }
+
+    footer {
+        padding: 1.8rem max(2.4rem, calc(50% - 600px)) 0;
+    }
+
+    .footer__items {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+    }
+
+    footer .menu {
+        flex-grow: 0;
+    }
+
+    .footer__logo {
+        width: 30%;
+        min-width: 300px;
+    }
+
+    header {
+        padding-left: max(2.4rem, calc(50% - 600px + 2.4rem));
+        padding-right: max(2.4rem, calc(50% - 600px + 2.4rem));
+    }
+
+    .menu__nav {
+        display: block;
+    }
+
+    .menu__hamburger {
+        display: none;
+    }
+
+    .menu__nav-item {
+        margin: 0 .5rem;
+    }
 }
