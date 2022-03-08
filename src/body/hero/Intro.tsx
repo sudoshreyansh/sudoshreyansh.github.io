@@ -1,6 +1,6 @@
 function Intro() {
     return (
-        <div className="w-1/2 pr-20">
+        <div className="w-full pr-20">
             <div className="font-semibold tracking-wide uppercase mb-6 text-slate-300">
                 Hi, I am Shreyansh Jain
             </div>

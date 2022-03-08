@@ -5,7 +5,7 @@ const CardsData = [
         title: "Backend",
         description: "Developing complex cloud architectures or designing a GraphQL API.",
         experience: "2-3 Years",
-        extraClass: "-rotate-6 -translate-x-28"
+        extraClass: "-translate-x-32"
     },
     {
         title: "Frontend",
@@ -17,23 +17,25 @@ const CardsData = [
         title: "Web 3.0",
         description: "Web 3.0 involves decentralization using technologies like IPFS, Blockchain and more.",
         experience: "0-1 Years",
-        extraClass: "rotate-6 translate-x-28 translate-y-2"
+        extraClass: "translate-x-32"
     }
 ]
 
 function Cards() {
     return (
-        <div className="relative w-52 h-80 mx-auto mt-12">
-            {
-                CardsData.map(data => 
-                    <Card
-                        title={data.title} 
-                        description={data.description} 
-                        experience={data.experience} 
-                        extraClass={data.extraClass}
-                    />
-                )
-            }
+        <div className="max-w-full min-w-full overflow-hidden">
+            <div className="relative w-52 h-80 mx-auto mt-12">
+                {
+                    CardsData.map(data => 
+                        <Card
+                            title={data.title} 
+                            description={data.description} 
+                            experience={data.experience} 
+                            extraClass={data.extraClass}
+                        />
+                    )
+                }
+            </div>
         </div>
     )
 }

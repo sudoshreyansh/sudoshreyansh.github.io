@@ -5,7 +5,7 @@ import Activities from './activities/Activities'
 
 function Body() {
     return (
-        <main className="px-5 xl:px-0">
+        <main>
             <Hero />
             <Works />
             <Skills />
